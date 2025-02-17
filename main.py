@@ -48,6 +48,7 @@ async def integration(request: Request):
                 {"label": "interval", "type": "text", "required": True, "default": "* * * * *"},
             ],
             "tick_url": f"{base_url}/tick",
+            "target_url": ""
         }
     }
     return integration_json
