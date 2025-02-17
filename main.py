@@ -65,7 +65,7 @@ def send_message_to_groq(message: str):
     )
     return chat_completion.choices[0].message.content
 
-@app.post("/message")
+@app.post("/tick")
 async def message(payload: Payload):
     bot_response = send_message_to_groq(payload.message)
     telex_format = {
